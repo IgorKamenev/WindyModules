@@ -4,6 +4,8 @@
 # use_frameworks!
 
 target 'WindyModules' do
+    
+    pod 'PureLayout'
 
 end
 

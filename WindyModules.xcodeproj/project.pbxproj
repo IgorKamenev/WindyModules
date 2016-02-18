@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100B349BEC587F0B43066601 /* libPods-WindyModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95814E44881260FCD941C6D2 /* libPods-WindyModules.a */; };
+		EC8EA9E31C74609C000669C0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8EA9E21C74609C000669C0 /* TestViewController.m */; };
+		ECA84FDB1C6FC6FD00B7A47D /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA84FDA1C6FC6FD00B7A47D /* MyProfileViewController.m */; };
+		ECA84FE11C70207400B7A47D /* UIColor+AllColors.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA84FE01C70207400B7A47D /* UIColor+AllColors.m */; };
 		FB4A45561C6FB68B005CF95C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45551C6FB68B005CF95C /* main.m */; };
 		FB4A45591C6FB68B005CF95C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45581C6FB68B005CF95C /* AppDelegate.m */; };
-		FB4A455C1C6FB68B005CF95C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A455B1C6FB68B005CF95C /* ViewController.m */; };
 		FB4A45611C6FB68B005CF95C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4A45601C6FB68B005CF95C /* Assets.xcassets */; };
-		FB4A45641C6FB68B005CF95C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4A45621C6FB68B005CF95C /* LaunchScreen.storyboard */; };
 		FB4A456F1C6FB6E3005CF95C /* ExampleTableWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A456E1C6FB6E3005CF95C /* ExampleTableWireframe.m */; };
 		FB4A45721C6FB6F0005CF95C /* ExampleTablePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45711C6FB6F0005CF95C /* ExampleTablePresenter.m */; };
 		FB4A45751C6FB6FF005CF95C /* ExampleTableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45741C6FB6FF005CF95C /* ExampleTableInteractor.m */; };
@@ -20,19 +22,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9012BE71F1674365B26042F6 /* Pods-WindyModules.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyModules.release.xcconfig"; path = "Pods/Target Support Files/Pods-WindyModules/Pods-WindyModules.release.xcconfig"; sourceTree = "<group>"; };
+		95814E44881260FCD941C6D2 /* libPods-WindyModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WindyModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB79FE431AD4F17E5FE37374 /* Pods-WindyModules.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyModules.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WindyModules/Pods-WindyModules.debug.xcconfig"; sourceTree = "<group>"; };
+		EC8EA9E11C74609C000669C0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		EC8EA9E21C74609C000669C0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		ECA84FD91C6FC6FD00B7A47D /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		ECA84FDA1C6FC6FD00B7A47D /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
+		ECA84FDF1C70207400B7A47D /* UIColor+AllColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AllColors.h"; sourceTree = "<group>"; };
+		ECA84FE01C70207400B7A47D /* UIColor+AllColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AllColors.m"; sourceTree = "<group>"; };
 		FB4A45511C6FB68B005CF95C /* WindyModules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindyModules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4A45551C6FB68B005CF95C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB4A45571C6FB68B005CF95C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB4A45581C6FB68B005CF95C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB4A455A1C6FB68B005CF95C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB4A455B1C6FB68B005CF95C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB4A45601C6FB68B005CF95C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB4A45631C6FB68B005CF95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4A45651C6FB68B005CF95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4A456D1C6FB6E3005CF95C /* ExampleTableWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableWireframe.h; sourceTree = "<group>"; };
 		FB4A456E1C6FB6E3005CF95C /* ExampleTableWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableWireframe.m; sourceTree = "<group>"; };
-		FB4A45701C6FB6F0005CF95C /* ExampleTablePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTablePresenter.h; sourceTree = "<group>"; };
-		FB4A45711C6FB6F0005CF95C /* ExampleTablePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTablePresenter.m; sourceTree = "<group>"; };
+		FB4A45701C6FB6F0005CF95C /* ExampleTablePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleTablePresenter.h; path = ../ExampleTablePresenter.h; sourceTree = "<group>"; };
+		FB4A45711C6FB6F0005CF95C /* ExampleTablePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleTablePresenter.m; path = ../ExampleTablePresenter.m; sourceTree = "<group>"; };
 		FB4A45731C6FB6FF005CF95C /* ExampleTableInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableInteractor.h; sourceTree = "<group>"; };
 		FB4A45741C6FB6FF005CF95C /* ExampleTableInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableInteractor.m; sourceTree = "<group>"; };
 		FB4A45761C6FB710005CF95C /* ExampleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableView.h; sourceTree = "<group>"; };
@@ -46,17 +54,118 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100B349BEC587F0B43066601 /* libPods-WindyModules.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		823D17529AB5E3D1D722047B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB79FE431AD4F17E5FE37374 /* Pods-WindyModules.debug.xcconfig */,
+				9012BE71F1674365B26042F6 /* Pods-WindyModules.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ECA84FD01C6FC31B00B7A47D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A45701C6FB6F0005CF95C /* ExampleTablePresenter.h */,
+				FB4A45711C6FB6F0005CF95C /* ExampleTablePresenter.m */,
+			);
+			name = Presenter;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ECA84FD11C6FC33000B7A47D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A45731C6FB6FF005CF95C /* ExampleTableInteractor.h */,
+				FB4A45741C6FB6FF005CF95C /* ExampleTableInteractor.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		ECA84FD21C6FC33800B7A47D /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A456D1C6FB6E3005CF95C /* ExampleTableWireframe.h */,
+				FB4A456E1C6FB6E3005CF95C /* ExampleTableWireframe.m */,
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		ECA84FD31C6FC36100B7A47D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB4A45761C6FB710005CF95C /* ExampleTableView.h */,
+				FB4A45771C6FB710005CF95C /* ExampleTableView.m */,
+				FB4A45791C6FBB4F005CF95C /* Cells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ECA84FD41C6FC69B00B7A47D /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				ECA84FD81C6FC6D600B7A47D /* View */,
+				ECA84FD71C6FC6CE00B7A47D /* Interactor */,
+				ECA84FD61C6FC6C600B7A47D /* Presenter */,
+				ECA84FD51C6FC6BF00B7A47D /* Wireframe */,
+			);
+			name = MyProfile;
+			sourceTree = "<group>";
+		};
+		ECA84FD51C6FC6BF00B7A47D /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		ECA84FD61C6FC6C600B7A47D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		ECA84FD71C6FC6CE00B7A47D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		ECA84FD81C6FC6D600B7A47D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECA84FD91C6FC6FD00B7A47D /* MyProfileViewController.h */,
+				ECA84FDA1C6FC6FD00B7A47D /* MyProfileViewController.m */,
+				EC8EA9E11C74609C000669C0 /* TestViewController.h */,
+				EC8EA9E21C74609C000669C0 /* TestViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F5A9A56EAF127B115451AD23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95814E44881260FCD941C6D2 /* libPods-WindyModules.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB4A45481C6FB68B005CF95C = {
 			isa = PBXGroup;
 			children = (
 				FB4A45531C6FB68B005CF95C /* WindyModules */,
 				FB4A45521C6FB68B005CF95C /* Products */,
+				823D17529AB5E3D1D722047B /* Pods */,
+				F5A9A56EAF127B115451AD23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,15 +180,13 @@
 		FB4A45531C6FB68B005CF95C /* WindyModules */ = {
 			isa = PBXGroup;
 			children = (
-				FB4A456B1C6FB6B8005CF95C /* Modules */,
 				FB4A45571C6FB68B005CF95C /* AppDelegate.h */,
 				FB4A45581C6FB68B005CF95C /* AppDelegate.m */,
-				FB4A455A1C6FB68B005CF95C /* ViewController.h */,
-				FB4A455B1C6FB68B005CF95C /* ViewController.m */,
+				FB4A456B1C6FB6B8005CF95C /* Modules */,
 				FB4A45601C6FB68B005CF95C /* Assets.xcassets */,
-				FB4A45621C6FB68B005CF95C /* LaunchScreen.storyboard */,
-				FB4A45651C6FB68B005CF95C /* Info.plist */,
 				FB4A45541C6FB68B005CF95C /* Supporting Files */,
+				ECA84FDF1C70207400B7A47D /* UIColor+AllColors.h */,
+				ECA84FE01C70207400B7A47D /* UIColor+AllColors.m */,
 			);
 			path = WindyModules;
 			sourceTree = "<group>";
@@ -87,6 +194,7 @@
 		FB4A45541C6FB68B005CF95C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB4A45651C6FB68B005CF95C /* Info.plist */,
 				FB4A45551C6FB68B005CF95C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -95,6 +203,7 @@
 		FB4A456B1C6FB6B8005CF95C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ECA84FD41C6FC69B00B7A47D /* MyProfile */,
 				FB4A456C1C6FB6D3005CF95C /* ExampleTableModule */,
 			);
 			path = Modules;
@@ -103,15 +212,10 @@
 		FB4A456C1C6FB6D3005CF95C /* ExampleTableModule */ = {
 			isa = PBXGroup;
 			children = (
-				FB4A45791C6FBB4F005CF95C /* Cells */,
-				FB4A456D1C6FB6E3005CF95C /* ExampleTableWireframe.h */,
-				FB4A456E1C6FB6E3005CF95C /* ExampleTableWireframe.m */,
-				FB4A45701C6FB6F0005CF95C /* ExampleTablePresenter.h */,
-				FB4A45711C6FB6F0005CF95C /* ExampleTablePresenter.m */,
-				FB4A45731C6FB6FF005CF95C /* ExampleTableInteractor.h */,
-				FB4A45741C6FB6FF005CF95C /* ExampleTableInteractor.m */,
-				FB4A45761C6FB710005CF95C /* ExampleTableView.h */,
-				FB4A45771C6FB710005CF95C /* ExampleTableView.m */,
+				ECA84FD31C6FC36100B7A47D /* View */,
+				ECA84FD11C6FC33000B7A47D /* Interactor */,
+				ECA84FD01C6FC31B00B7A47D /* Presenter */,
+				ECA84FD21C6FC33800B7A47D /* Wireframe */,
 			);
 			path = ExampleTableModule;
 			sourceTree = "<group>";
@@ -132,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB4A45681C6FB68B005CF95C /* Build configuration list for PBXNativeTarget "WindyModules" */;
 			buildPhases = (
+				A1E4F1192345D0D145220020 /* Check Pods Manifest.lock */,
 				FB4A454D1C6FB68B005CF95C /* Sources */,
 				FB4A454E1C6FB68B005CF95C /* Frameworks */,
 				FB4A454F1C6FB68B005CF95C /* Resources */,
+				93E948F6FA67F488485225A3 /* Embed Pods Frameworks */,
+				2034CFBE0852C769898E9CBF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,12 +289,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4A45641C6FB68B005CF95C /* LaunchScreen.storyboard in Resources */,
 				FB4A45611C6FB68B005CF95C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2034CFBE0852C769898E9CBF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WindyModules/Pods-WindyModules-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93E948F6FA67F488485225A3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WindyModules/Pods-WindyModules-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1E4F1192345D0D145220020 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB4A454D1C6FB68B005CF95C /* Sources */ = {
@@ -196,9 +350,11 @@
 			files = (
 				FB4A457C1C6FBB66005CF95C /* ExampleTableViewCell.m in Sources */,
 				FB4A45721C6FB6F0005CF95C /* ExampleTablePresenter.m in Sources */,
+				ECA84FDB1C6FC6FD00B7A47D /* MyProfileViewController.m in Sources */,
+				ECA84FE11C70207400B7A47D /* UIColor+AllColors.m in Sources */,
+				EC8EA9E31C74609C000669C0 /* TestViewController.m in Sources */,
 				FB4A45781C6FB710005CF95C /* ExampleTableView.m in Sources */,
 				FB4A456F1C6FB6E3005CF95C /* ExampleTableWireframe.m in Sources */,
-				FB4A455C1C6FB68B005CF95C /* ViewController.m in Sources */,
 				FB4A45591C6FB68B005CF95C /* AppDelegate.m in Sources */,
 				FB4A45751C6FB6FF005CF95C /* ExampleTableInteractor.m in Sources */,
 				FB4A45561C6FB68B005CF95C /* main.m in Sources */,
@@ -206,17 +362,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FB4A45621C6FB68B005CF95C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB4A45631C6FB68B005CF95C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FB4A45661C6FB68B005CF95C /* Debug */ = {
@@ -303,6 +448,7 @@
 		};
 		FB4A45691C6FB68B005CF95C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB79FE431AD4F17E5FE37374 /* Pods-WindyModules.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WindyModules/Info.plist;
@@ -314,6 +460,7 @@
 		};
 		FB4A456A1C6FB68B005CF95C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9012BE71F1674365B26042F6 /* Pods-WindyModules.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WindyModules/Info.plist;
@@ -342,6 +489,7 @@
 				FB4A456A1C6FB68B005CF95C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
