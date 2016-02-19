@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6C3396D52AC90478F456923C'
-               BlueprintName = 'PureLayout'
+               BlueprintIdentifier = 'FB82270902C27111201730C9'
+               BlueprintName = 'OAStackView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPureLayout.a'>
+               BuildableName = 'libOAStackView.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

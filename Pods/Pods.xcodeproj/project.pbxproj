@@ -7,77 +7,186 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32FD1B2FD3485FC0A6D24B838D815E6C /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E956DAAFFAB936CB60D9273E05D498 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33A29CA43C1E2E269B935D5E672EED35 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 45945D8F3DAD605A883B94C9128AB860 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		580891C371F4BDB341589BD125FD9A08 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E41D14862AA071D9F8A5E652619270AF /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60F0DF2F496B592A48B42EDF30B0E903 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D7DC82AF6F6260F768473B043656411 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		704ABA115F7986A24FBEBA1614B4E9F0 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F545BE94C48C8AFEED462FE6F8D3597A /* NSLayoutConstraint+PureLayout.m */; };
-		8F04D4A825B9F604169CD6F445E99868 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 873FC3649F700A415796A33CE2641055 /* NSArray+PureLayout.m */; };
-		9B903C3AD80C98642D57088DF941BEF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		A4D10F0D770FCA16F15741C54E33B559 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = D10E06F10AB8CECE8141D32B75CCA4FE /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9524EB3AB02232FBC56FDD1A0CB0853 /* Pods-WindyModules-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C423A013E3DD3C81B6567C35A2C197 /* Pods-WindyModules-dummy.m */; };
-		ACCF28C66AB1B6680FD7A594A2461281 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F48602517ECB353DCB8C98633FCAB09 /* ALView+PureLayout.m */; };
-		C4C89A23F6174EA945B6E119C85EE5A2 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF183D164AEA03A4AA2A2F5185EFE7D /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E03A9F95040C65DE53F2D7F2D0C555A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		E2F8452D45046892925BC40F50DC16FA /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0A907C755768715DA7F954CDC61B9E /* PureLayout-dummy.m */; };
+		001D506E87A5B7097BD094313297C453 /* OAStackViewAlignmentStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = B89C7D2234E96E9D1EAAE78A9DDBE357 /* OAStackViewAlignmentStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B842171AC4FC59E806159A6A263898E /* _OALayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 131A210C9412541130DF242144912BEB /* _OALayoutGuide.m */; };
+		165AD11E9D34B83AC9262E2A78BED040 /* OAStackView+Hiding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E2B8EF9D781C668865EAA36F2840 /* OAStackView+Hiding.m */; };
+		2DF79A85ACE5E52B7D27B79D814C49B3 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3416041AB5D115EF4821DE396057825A /* NSArray+PureLayout.m */; };
+		2EBE97DEFD6D90D257553945B2A9657F /* OAStackViewAlignmentStrategyBaseline.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FB55E9ECBAC707AE9D0B4E6C4501D5 /* OAStackViewAlignmentStrategyBaseline.m */; };
+		33407DA99B39B7CA387D002B77CDBB74 /* _OALayoutGuide.h in Headers */ = {isa = PBXBuildFile; fileRef = F4C052F41F44D7B1B13A8B2DB8D55D20 /* _OALayoutGuide.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33D64F339CF819A4AE3A74A0AD2BDF9B /* OAStackView+Hiding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F16B09A13D24EDAA69217BF97AC49DD /* OAStackView+Hiding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34997BA365E320B2BEC7EFA2BD381AB2 /* OAStackView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3E0346929B15E38907F2EF4971E54B /* OAStackView-dummy.m */; };
+		357028869021D2CF599B2A61B82072E0 /* OAStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B980B9336D5E95C03692F7C894EC351 /* OAStackView.m */; };
+		3D977C720AB6528F46D1B882C456DF05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4988AD373FEAF0B3D3287075576289EB /* OAStackView+Constraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D11B80009C0336B3BC79061362AD61 /* OAStackView+Constraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B2686290E5220E577AA686C8AF76886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4E4FDE1C98FBA828E046D67902F232D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		504C9C1622510FAC1E72E01EF0DE41A7 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 56433186C239F7B9F867F1CCA03E0ACE /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		533B20F8D3529097D73E79A0E5A8C842 /* OAStackViewDistributionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = F692556B748B1352E21797571FDCB55F /* OAStackViewDistributionStrategy.m */; };
+		543F919A9263D75AD09FD35D4119FBEF /* OAStackViewAlignmentStrategyBaseline.h in Headers */ = {isa = PBXBuildFile; fileRef = A604CC1DE71658BA9E4588D44007EB35 /* OAStackViewAlignmentStrategyBaseline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56E454532E4BF1A10F510A69DF8CEFA4 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFFF29EF74EFB141F4497BC9F7EB4B0 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B66084F7C6623F352BE9764AED9F718 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EBABF1E5A3A4B0CF7461ABA6BEE753C4 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DA9D80A3BC3AA013585632EE9C13421 /* OAStackView+Traversal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4FCE749D7985436FC5B8ABD3F51DFF /* OAStackView+Traversal.m */; };
+		61428A5492D48282618629F3E52FF926 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = E91A8560B31368371AD885B3618D6708 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68F5344C5ACDF2D38F1E3C08F5CF49FE /* OAStackView+Traversal.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A553EAD02A1D07F083E77EEAA1C744 /* OAStackView+Traversal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78571128CABFA02034FD44EAC8E27139 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 737053BCF7293431A0EBA4CF2B9F9D08 /* PureLayout-dummy.m */; };
+		7E098B1C7076A5C76F97172007C95272 /* OAStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37BAC41035DF52F4E845E8873D3008FF /* OAStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81CE6FCC9FFFC6D3CC4AEF01B70FCA33 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EBB15991453A4658DDBE74D886D540F /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82343E8D70436F87D65C377BFB18BAE4 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0126FA9A26223BBA6B52A80A5EE0D /* ALView+PureLayout.m */; };
+		84F93992E9C59D4E0B24F4F9AC259148 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C1735DBBCF604B905E7C967F4E801 /* NSLayoutConstraint+PureLayout.m */; };
+		8FA5498B976319A4DB8A58B9E68F09EF /* OATransformLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F77BE6B7051AA9F91BC159946E8CC0C /* OATransformLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		967821AF34C5151896A0456A6573B52C /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 59AC80A7634EE24AD6D87AC5083B0FEA /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AD30134017A03966BED6AAC705C7C92 /* OAStackView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5CBAB55AD8305D0E27CB272BDD8163 /* OAStackView+Constraint.m */; };
+		B3ECAEBDAFCC125BEAFE3BB81487A6E0 /* Pods-WindyModules-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C423A013E3DD3C81B6567C35A2C197 /* Pods-WindyModules-dummy.m */; };
+		CBB1612BD3819230D648B53F8DDE88AE /* OAStackViewAlignmentStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E8B6E6363C0E5E212DB01A735A75B1 /* OAStackViewAlignmentStrategy.m */; };
+		E98B259CE519A4FBE933F01189D4402D /* OATransformLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAD2A24265EF77A5B3AD8A8FADDFC9 /* OATransformLayer.m */; };
+		F6B4D403FAF6FD5DDE3AC036A520EB0C /* OAStackViewDistributionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC8737C0D556EB790F26CB6BDF35AA4 /* OAStackViewDistributionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F5E22FA502886BB1A21CF67F713286A1 /* PBXContainerItemProxy */ = {
+		2889924F5CE205FA0AB09C7B5EAB32DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B3AFB0C212F107B90A7453F1C29DAC8D;
+			remoteGlobalIDString = EA8B365D66B906406EFC007B55DEFDBB;
 			remoteInfo = PureLayout;
+		};
+		70424A7E2ABAAD02326505533511AA13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2728D1720063D2C4734E38C851F43244;
+			remoteInfo = "OAStackView-OAStackView";
+		};
+		961E9E755FCC4768661CAF6001951091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9331DC06026102A6939CE75D29D7684E;
+			remoteInfo = OAStackView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0681748401AE42D1B202A6CA7E8F9EE2 /* Pods-WindyModules-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WindyModules-resources.sh"; sourceTree = "<group>"; };
-		129832CAED57495522F06699874AB5E0 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
-		1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		097C1735DBBCF604B905E7C967F4E801 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		131A210C9412541130DF242144912BEB /* _OALayoutGuide.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _OALayoutGuide.m; path = Pod/Classes/_OALayoutGuide.m; sourceTree = "<group>"; };
+		19D11B80009C0336B3BC79061362AD61 /* OAStackView+Constraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OAStackView+Constraint.h"; path = "Pod/Classes/OAStackView+Constraint.h"; sourceTree = "<group>"; };
+		1D80E2B8EF9D781C668865EAA36F2840 /* OAStackView+Hiding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OAStackView+Hiding.m"; path = "Pod/Classes/OAStackView+Hiding.m"; sourceTree = "<group>"; };
+		1EFFF29EF74EFB141F4497BC9F7EB4B0 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		2B980B9336D5E95C03692F7C894EC351 /* OAStackView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OAStackView.m; path = Pod/Classes/OAStackView.m; sourceTree = "<group>"; };
+		2D4FCE749D7985436FC5B8ABD3F51DFF /* OAStackView+Traversal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OAStackView+Traversal.m"; path = "Pod/Classes/OAStackView+Traversal.m"; sourceTree = "<group>"; };
+		2D5CBAB55AD8305D0E27CB272BDD8163 /* OAStackView+Constraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OAStackView+Constraint.m"; path = "Pod/Classes/OAStackView+Constraint.m"; sourceTree = "<group>"; };
+		2F77BE6B7051AA9F91BC159946E8CC0C /* OATransformLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OATransformLayer.h; path = Pod/Classes/OATransformLayer.h; sourceTree = "<group>"; };
+		31A553EAD02A1D07F083E77EEAA1C744 /* OAStackView+Traversal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OAStackView+Traversal.h"; path = "Pod/Classes/OAStackView+Traversal.h"; sourceTree = "<group>"; };
+		3416041AB5D115EF4821DE396057825A /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		37BAC41035DF52F4E845E8873D3008FF /* OAStackView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAStackView.h; path = Pod/Classes/OAStackView.h; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		45945D8F3DAD605A883B94C9128AB860 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		3F16B09A13D24EDAA69217BF97AC49DD /* OAStackView+Hiding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OAStackView+Hiding.h"; path = "Pod/Classes/OAStackView+Hiding.h"; sourceTree = "<group>"; };
+		40E8B6E6363C0E5E212DB01A735A75B1 /* OAStackViewAlignmentStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OAStackViewAlignmentStrategy.m; path = Pod/Classes/OAStackViewAlignmentStrategy.m; sourceTree = "<group>"; };
+		40FB55E9ECBAC707AE9D0B4E6C4501D5 /* OAStackViewAlignmentStrategyBaseline.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OAStackViewAlignmentStrategyBaseline.m; path = Pod/Classes/OAStackViewAlignmentStrategyBaseline.m; sourceTree = "<group>"; };
+		4DE92D1A05311F37CD553A3BA617281E /* libPureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPureLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C423A013E3DD3C81B6567C35A2C197 /* Pods-WindyModules-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WindyModules-dummy.m"; sourceTree = "<group>"; };
-		57E956DAAFFAB936CB60D9273E05D498 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		56433186C239F7B9F867F1CCA03E0ACE /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		59AC80A7634EE24AD6D87AC5083B0FEA /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
 		5B0F39AA49F2AD79FA84B969667DF20C /* Pods-WindyModules.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WindyModules.release.xcconfig"; sourceTree = "<group>"; };
-		5F48602517ECB353DCB8C98633FCAB09 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
-		7D7DC82AF6F6260F768473B043656411 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
-		873FC3649F700A415796A33CE2641055 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		5EBB15991453A4658DDBE74D886D540F /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		6E8A6802D6CBFF124E088795AEFFBC2D /* OAStackView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAStackView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		737053BCF7293431A0EBA4CF2B9F9D08 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
+		7FAAD2A24265EF77A5B3AD8A8FADDFC9 /* OATransformLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OATransformLayer.m; path = Pod/Classes/OATransformLayer.m; sourceTree = "<group>"; };
+		80CEC6A7F4CFD0025F730B0B1D1640E6 /* libPods-WindyModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WindyModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B0126FA9A26223BBA6B52A80A5EE0D /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		83F44B2E118275C042A77180682A6E8A /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
 		956ACB2AC4C1ADD6DB4BF4FBCAFB147C /* Pods-WindyModules-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WindyModules-frameworks.sh"; sourceTree = "<group>"; };
 		9DFD91C5C9E453AE0CC608F395C0D1DC /* Pods-WindyModules-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WindyModules-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ACF183D164AEA03A4AA2A2F5185EFE7D /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		A604CC1DE71658BA9E4588D44007EB35 /* OAStackViewAlignmentStrategyBaseline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAStackViewAlignmentStrategyBaseline.h; path = Pod/Classes/OAStackViewAlignmentStrategyBaseline.h; sourceTree = "<group>"; };
+		AB3E0346929B15E38907F2EF4971E54B /* OAStackView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAStackView-dummy.m"; sourceTree = "<group>"; };
+		AFBAD64B602CAAEF5814BD7BA4A61FEA /* OAStackView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAStackView-prefix.pch"; sourceTree = "<group>"; };
+		B89C7D2234E96E9D1EAAE78A9DDBE357 /* OAStackViewAlignmentStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAStackViewAlignmentStrategy.h; path = Pod/Classes/OAStackViewAlignmentStrategy.h; sourceTree = "<group>"; };
 		B9EB07095DC1D641B836C20A08993720 /* Pods-WindyModules-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WindyModules-acknowledgements.plist"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CAF80A2164257BEADBE6C1DF7A319817 /* libPureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPureLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE0A907C755768715DA7F954CDC61B9E /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
-		CFD3B6A545E6B20593EC868E73C7B27F /* libPods-WindyModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WindyModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D10E06F10AB8CECE8141D32B75CCA4FE /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		BAC8737C0D556EB790F26CB6BDF35AA4 /* OAStackViewDistributionStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OAStackViewDistributionStrategy.h; path = Pod/Classes/OAStackViewDistributionStrategy.h; sourceTree = "<group>"; };
+		C38A1B113F93F86B6783C5516843FECC /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
 		E01646A94B87500B88BE60E8CD72B5FF /* Pods-WindyModules.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WindyModules.debug.xcconfig"; sourceTree = "<group>"; };
-		E41D14862AA071D9F8A5E652619270AF /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
-		F545BE94C48C8AFEED462FE6F8D3597A /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		E91A8560B31368371AD885B3618D6708 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		EAD738B5D910A9A308FA3DD02DF73361 /* OAStackView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAStackView.xcconfig; sourceTree = "<group>"; };
+		EBABF1E5A3A4B0CF7461ABA6BEE753C4 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		EE7A033D99545A37252A84179168190C /* libOAStackView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOAStackView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C052F41F44D7B1B13A8B2DB8D55D20 /* _OALayoutGuide.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _OALayoutGuide.h; path = Pod/Classes/_OALayoutGuide.h; sourceTree = "<group>"; };
+		F692556B748B1352E21797571FDCB55F /* OAStackViewDistributionStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OAStackViewDistributionStrategy.m; path = Pod/Classes/OAStackViewDistributionStrategy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		60F97B43F21BD888E03ED90B08F9E0E9 /* Frameworks */ = {
+		156C3FB5DFA239BC04810151EF76DF09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E03A9F95040C65DE53F2D7F2D0C555A2 /* Foundation.framework in Frameworks */,
+				4B2686290E5220E577AA686C8AF76886 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1F0D987DC8DAD4C50EFB7A65F19771A /* Frameworks */ = {
+		58EBCBDB9C685F6264F9EC67D388A1D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B903C3AD80C98642D57088DF941BEF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B3A571B085DCF90BCD2D08039D94C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E4FDE1C98FBA828E046D67902F232D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E568DDBFCB611887B5FA46B98CDFB701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D977C720AB6528F46D1B882C456DF05 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CE0EDA5DCF994246C2D775A651E3F6E /* OAStackView */ = {
+			isa = PBXGroup;
+			children = (
+				F4C052F41F44D7B1B13A8B2DB8D55D20 /* _OALayoutGuide.h */,
+				131A210C9412541130DF242144912BEB /* _OALayoutGuide.m */,
+				37BAC41035DF52F4E845E8873D3008FF /* OAStackView.h */,
+				2B980B9336D5E95C03692F7C894EC351 /* OAStackView.m */,
+				19D11B80009C0336B3BC79061362AD61 /* OAStackView+Constraint.h */,
+				2D5CBAB55AD8305D0E27CB272BDD8163 /* OAStackView+Constraint.m */,
+				3F16B09A13D24EDAA69217BF97AC49DD /* OAStackView+Hiding.h */,
+				1D80E2B8EF9D781C668865EAA36F2840 /* OAStackView+Hiding.m */,
+				31A553EAD02A1D07F083E77EEAA1C744 /* OAStackView+Traversal.h */,
+				2D4FCE749D7985436FC5B8ABD3F51DFF /* OAStackView+Traversal.m */,
+				B89C7D2234E96E9D1EAAE78A9DDBE357 /* OAStackViewAlignmentStrategy.h */,
+				40E8B6E6363C0E5E212DB01A735A75B1 /* OAStackViewAlignmentStrategy.m */,
+				A604CC1DE71658BA9E4588D44007EB35 /* OAStackViewAlignmentStrategyBaseline.h */,
+				40FB55E9ECBAC707AE9D0B4E6C4501D5 /* OAStackViewAlignmentStrategyBaseline.m */,
+				BAC8737C0D556EB790F26CB6BDF35AA4 /* OAStackViewDistributionStrategy.h */,
+				F692556B748B1352E21797571FDCB55F /* OAStackViewDistributionStrategy.m */,
+				2F77BE6B7051AA9F91BC159946E8CC0C /* OATransformLayer.h */,
+				7FAAD2A24265EF77A5B3AD8A8FADDFC9 /* OATransformLayer.m */,
+				BE813ADD088545B202CA6BFBB60BB371 /* Support Files */,
+			);
+			path = OAStackView;
+			sourceTree = "<group>";
+		};
+		6392AC08529FC0E3EA539BADA7A88408 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE7A033D99545A37252A84179168190C /* libOAStackView.a */,
+				80CEC6A7F4CFD0025F730B0B1D1640E6 /* libPods-WindyModules.a */,
+				4DE92D1A05311F37CD553A3BA617281E /* libPureLayout.a */,
+				6E8A6802D6CBFF124E088795AEFFBC2D /* OAStackView.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		661ECFF5524B4F19E2D81697EA48B5BD /* Pods-WindyModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,46 +207,36 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A2FDD832DA64F35B104DD4C55A31BF8E /* Pods */,
-				FF6BA58C1896044B7B05A24A64F67712 /* Products */,
+				99B66FA7CFB1EF0AD0A1E7A70AC445AE /* Pods */,
+				6392AC08529FC0E3EA539BADA7A88408 /* Products */,
 				FA1F13953CCE0E52319D4744EF9B71C9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		83F65399C3808A743CC1392CF12DD692 /* Support Files */ = {
+		81C33874ED944647F4917466CDF6D545 /* PureLayout */ = {
 			isa = PBXGroup;
 			children = (
-				1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */,
-				CE0A907C755768715DA7F954CDC61B9E /* PureLayout-dummy.m */,
-				129832CAED57495522F06699874AB5E0 /* PureLayout-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PureLayout";
-			sourceTree = "<group>";
-		};
-		A2FDD832DA64F35B104DD4C55A31BF8E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AB198DB8875A98298498BA74D26897FE /* PureLayout */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AB198DB8875A98298498BA74D26897FE /* PureLayout */ = {
-			isa = PBXGroup;
-			children = (
-				45945D8F3DAD605A883B94C9128AB860 /* ALView+PureLayout.h */,
-				5F48602517ECB353DCB8C98633FCAB09 /* ALView+PureLayout.m */,
-				7D7DC82AF6F6260F768473B043656411 /* NSArray+PureLayout.h */,
-				873FC3649F700A415796A33CE2641055 /* NSArray+PureLayout.m */,
-				E41D14862AA071D9F8A5E652619270AF /* NSLayoutConstraint+PureLayout.h */,
-				F545BE94C48C8AFEED462FE6F8D3597A /* NSLayoutConstraint+PureLayout.m */,
-				57E956DAAFFAB936CB60D9273E05D498 /* PureLayout.h */,
-				D10E06F10AB8CECE8141D32B75CCA4FE /* PureLayout+Internal.h */,
-				ACF183D164AEA03A4AA2A2F5185EFE7D /* PureLayoutDefines.h */,
-				83F65399C3808A743CC1392CF12DD692 /* Support Files */,
+				1EFFF29EF74EFB141F4497BC9F7EB4B0 /* ALView+PureLayout.h */,
+				83B0126FA9A26223BBA6B52A80A5EE0D /* ALView+PureLayout.m */,
+				56433186C239F7B9F867F1CCA03E0ACE /* NSArray+PureLayout.h */,
+				3416041AB5D115EF4821DE396057825A /* NSArray+PureLayout.m */,
+				59AC80A7634EE24AD6D87AC5083B0FEA /* NSLayoutConstraint+PureLayout.h */,
+				097C1735DBBCF604B905E7C967F4E801 /* NSLayoutConstraint+PureLayout.m */,
+				EBABF1E5A3A4B0CF7461ABA6BEE753C4 /* PureLayout.h */,
+				E91A8560B31368371AD885B3618D6708 /* PureLayout+Internal.h */,
+				5EBB15991453A4658DDBE74D886D540F /* PureLayoutDefines.h */,
+				D6CE5A0917D71BB2D316133F2C0DE8B0 /* Support Files */,
 			);
 			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		99B66FA7CFB1EF0AD0A1E7A70AC445AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CE0EDA5DCF994246C2D775A651E3F6E /* OAStackView */,
+				81C33874ED944647F4917466CDF6D545 /* PureLayout */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -148,12 +247,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE813ADD088545B202CA6BFBB60BB371 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAD738B5D910A9A308FA3DD02DF73361 /* OAStackView.xcconfig */,
+				AB3E0346929B15E38907F2EF4971E54B /* OAStackView-dummy.m */,
+				AFBAD64B602CAAEF5814BD7BA4A61FEA /* OAStackView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OAStackView";
+			sourceTree = "<group>";
+		};
 		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		D6CE5A0917D71BB2D316133F2C0DE8B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C38A1B113F93F86B6783C5516843FECC /* PureLayout.xcconfig */,
+				737053BCF7293431A0EBA4CF2B9F9D08 /* PureLayout-dummy.m */,
+				83F44B2E118275C042A77180682A6E8A /* PureLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PureLayout";
 			sourceTree = "<group>";
 		};
 		FA1F13953CCE0E52319D4744EF9B71C9 /* Targets Support Files */ = {
@@ -164,58 +285,101 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		FF6BA58C1896044B7B05A24A64F67712 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CFD3B6A545E6B20593EC868E73C7B27F /* libPods-WindyModules.a */,
-				CAF80A2164257BEADBE6C1DF7A319817 /* libPureLayout.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B4CF2ED42CABE58E7D3CCCA3E0ACA0DB /* Headers */ = {
+		7A2E910982BDCC8330B50FF05CE1529B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A29CA43C1E2E269B935D5E672EED35 /* ALView+PureLayout.h in Headers */,
-				60F0DF2F496B592A48B42EDF30B0E903 /* NSArray+PureLayout.h in Headers */,
-				580891C371F4BDB341589BD125FD9A08 /* NSLayoutConstraint+PureLayout.h in Headers */,
-				A4D10F0D770FCA16F15741C54E33B559 /* PureLayout+Internal.h in Headers */,
-				32FD1B2FD3485FC0A6D24B838D815E6C /* PureLayout.h in Headers */,
-				C4C89A23F6174EA945B6E119C85EE5A2 /* PureLayoutDefines.h in Headers */,
+				56E454532E4BF1A10F510A69DF8CEFA4 /* ALView+PureLayout.h in Headers */,
+				504C9C1622510FAC1E72E01EF0DE41A7 /* NSArray+PureLayout.h in Headers */,
+				967821AF34C5151896A0456A6573B52C /* NSLayoutConstraint+PureLayout.h in Headers */,
+				61428A5492D48282618629F3E52FF926 /* PureLayout+Internal.h in Headers */,
+				5B66084F7C6623F352BE9764AED9F718 /* PureLayout.h in Headers */,
+				81CE6FCC9FFFC6D3CC4AEF01B70FCA33 /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C79B076F01B4806B439AF2FE83F35709 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33407DA99B39B7CA387D002B77CDBB74 /* _OALayoutGuide.h in Headers */,
+				4988AD373FEAF0B3D3287075576289EB /* OAStackView+Constraint.h in Headers */,
+				33D64F339CF819A4AE3A74A0AD2BDF9B /* OAStackView+Hiding.h in Headers */,
+				68F5344C5ACDF2D38F1E3C08F5CF49FE /* OAStackView+Traversal.h in Headers */,
+				7E098B1C7076A5C76F97172007C95272 /* OAStackView.h in Headers */,
+				001D506E87A5B7097BD094313297C453 /* OAStackViewAlignmentStrategy.h in Headers */,
+				543F919A9263D75AD09FD35D4119FBEF /* OAStackViewAlignmentStrategyBaseline.h in Headers */,
+				F6B4D403FAF6FD5DDE3AC036A520EB0C /* OAStackViewDistributionStrategy.h in Headers */,
+				8FA5498B976319A4DB8A58B9E68F09EF /* OATransformLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		27FE4F61199E3047003E0FD7F0D3C203 /* Pods-WindyModules */ = {
+		156EB80B53E96097D8D4D93805A992ED /* Pods-WindyModules */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 687C4915BCFDD76D5535BF372B22519C /* Build configuration list for PBXNativeTarget "Pods-WindyModules" */;
+			buildConfigurationList = AF9D9936D08020B5FF2BCFE4C8D39772 /* Build configuration list for PBXNativeTarget "Pods-WindyModules" */;
 			buildPhases = (
-				6DD37DC2DF36932408138A065A69D3B3 /* Sources */,
-				D1F0D987DC8DAD4C50EFB7A65F19771A /* Frameworks */,
+				434C215FC2EC9D8229D6CCE199248EE4 /* Sources */,
+				83B3A571B085DCF90BCD2D08039D94C7 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9D0BFDC6B027CDF9F954667AC4B10DE9 /* PBXTargetDependency */,
+				E44EFF35A4A29A9C2F5E0EE816EE9168 /* PBXTargetDependency */,
+				E9855F28DD7CC3ACF3DEA69B0DBE1C01 /* PBXTargetDependency */,
 			);
 			name = "Pods-WindyModules";
 			productName = "Pods-WindyModules";
-			productReference = CFD3B6A545E6B20593EC868E73C7B27F /* libPods-WindyModules.a */;
+			productReference = 80CEC6A7F4CFD0025F730B0B1D1640E6 /* libPods-WindyModules.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B3AFB0C212F107B90A7453F1C29DAC8D /* PureLayout */ = {
+		2728D1720063D2C4734E38C851F43244 /* OAStackView-OAStackView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B42B24AC65751D2F4DAAD871117DD728 /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildConfigurationList = 8B91EC3FF6497E68A4753D6100332510 /* Build configuration list for PBXNativeTarget "OAStackView-OAStackView" */;
 			buildPhases = (
-				09AED3A0612AE6CA6C3F5B3BB700C7AE /* Sources */,
-				60F97B43F21BD888E03ED90B08F9E0E9 /* Frameworks */,
-				B4CF2ED42CABE58E7D3CCCA3E0ACA0DB /* Headers */,
+				6ADCBC8547303953046616B69E960001 /* Sources */,
+				58EBCBDB9C685F6264F9EC67D388A1D4 /* Frameworks */,
+				6077AA372EF6CFA54CB4874175A107D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAStackView-OAStackView";
+			productName = "OAStackView-OAStackView";
+			productReference = 6E8A6802D6CBFF124E088795AEFFBC2D /* OAStackView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		9331DC06026102A6939CE75D29D7684E /* OAStackView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D45E6A4080164AB4506E2A6FD8977300 /* Build configuration list for PBXNativeTarget "OAStackView" */;
+			buildPhases = (
+				157A9500949A06CE744F134BDC556FCA /* Sources */,
+				E568DDBFCB611887B5FA46B98CDFB701 /* Frameworks */,
+				C79B076F01B4806B439AF2FE83F35709 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D619CD870A7A716AC605BEF80EF04C /* PBXTargetDependency */,
+			);
+			name = OAStackView;
+			productName = OAStackView;
+			productReference = EE7A033D99545A37252A84179168190C /* libOAStackView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA8B365D66B906406EFC007B55DEFDBB /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FE5E73BC263EEC374B9AFC72E5FAD11 /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				C7ECB108A417A0EC238D7BDEA8BD0236 /* Sources */,
+				156C3FB5DFA239BC04810151EF76DF09 /* Frameworks */,
+				7A2E910982BDCC8330B50FF05CE1529B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -223,7 +387,7 @@
 			);
 			name = PureLayout;
 			productName = PureLayout;
-			productReference = CAF80A2164257BEADBE6C1DF7A319817 /* libPureLayout.a */;
+			productReference = 4DE92D1A05311F37CD553A3BA617281E /* libPureLayout.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -243,49 +407,97 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = FF6BA58C1896044B7B05A24A64F67712 /* Products */;
+			productRefGroup = 6392AC08529FC0E3EA539BADA7A88408 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27FE4F61199E3047003E0FD7F0D3C203 /* Pods-WindyModules */,
-				B3AFB0C212F107B90A7453F1C29DAC8D /* PureLayout */,
+				9331DC06026102A6939CE75D29D7684E /* OAStackView */,
+				2728D1720063D2C4734E38C851F43244 /* OAStackView-OAStackView */,
+				156EB80B53E96097D8D4D93805A992ED /* Pods-WindyModules */,
+				EA8B365D66B906406EFC007B55DEFDBB /* PureLayout */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		09AED3A0612AE6CA6C3F5B3BB700C7AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		6077AA372EF6CFA54CB4874175A107D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACCF28C66AB1B6680FD7A594A2461281 /* ALView+PureLayout.m in Sources */,
-				8F04D4A825B9F604169CD6F445E99868 /* NSArray+PureLayout.m in Sources */,
-				704ABA115F7986A24FBEBA1614B4E9F0 /* NSLayoutConstraint+PureLayout.m in Sources */,
-				E2F8452D45046892925BC40F50DC16FA /* PureLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6DD37DC2DF36932408138A065A69D3B3 /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		157A9500949A06CE744F134BDC556FCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9524EB3AB02232FBC56FDD1A0CB0853 /* Pods-WindyModules-dummy.m in Sources */,
+				0B842171AC4FC59E806159A6A263898E /* _OALayoutGuide.m in Sources */,
+				9AD30134017A03966BED6AAC705C7C92 /* OAStackView+Constraint.m in Sources */,
+				165AD11E9D34B83AC9262E2A78BED040 /* OAStackView+Hiding.m in Sources */,
+				5DA9D80A3BC3AA013585632EE9C13421 /* OAStackView+Traversal.m in Sources */,
+				34997BA365E320B2BEC7EFA2BD381AB2 /* OAStackView-dummy.m in Sources */,
+				357028869021D2CF599B2A61B82072E0 /* OAStackView.m in Sources */,
+				CBB1612BD3819230D648B53F8DDE88AE /* OAStackViewAlignmentStrategy.m in Sources */,
+				2EBE97DEFD6D90D257553945B2A9657F /* OAStackViewAlignmentStrategyBaseline.m in Sources */,
+				533B20F8D3529097D73E79A0E5A8C842 /* OAStackViewDistributionStrategy.m in Sources */,
+				E98B259CE519A4FBE933F01189D4402D /* OATransformLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		434C215FC2EC9D8229D6CCE199248EE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3ECAEBDAFCC125BEAFE3BB81487A6E0 /* Pods-WindyModules-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ADCBC8547303953046616B69E960001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7ECB108A417A0EC238D7BDEA8BD0236 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82343E8D70436F87D65C377BFB18BAE4 /* ALView+PureLayout.m in Sources */,
+				2DF79A85ACE5E52B7D27B79D814C49B3 /* NSArray+PureLayout.m in Sources */,
+				84F93992E9C59D4E0B24F4F9AC259148 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				78571128CABFA02034FD44EAC8E27139 /* PureLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9D0BFDC6B027CDF9F954667AC4B10DE9 /* PBXTargetDependency */ = {
+		37D619CD870A7A716AC605BEF80EF04C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OAStackView-OAStackView";
+			target = 2728D1720063D2C4734E38C851F43244 /* OAStackView-OAStackView */;
+			targetProxy = 70424A7E2ABAAD02326505533511AA13 /* PBXContainerItemProxy */;
+		};
+		E44EFF35A4A29A9C2F5E0EE816EE9168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAStackView;
+			target = 9331DC06026102A6939CE75D29D7684E /* OAStackView */;
+			targetProxy = 961E9E755FCC4768661CAF6001951091 /* PBXContainerItemProxy */;
+		};
+		E9855F28DD7CC3ACF3DEA69B0DBE1C01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
-			target = B3AFB0C212F107B90A7453F1C29DAC8D /* PureLayout */;
-			targetProxy = F5E22FA502886BB1A21CF67F713286A1 /* PBXContainerItemProxy */;
+			target = EA8B365D66B906406EFC007B55DEFDBB /* PureLayout */;
+			targetProxy = 2889924F5CE205FA0AB09C7B5EAB32DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0D96A59093FBFD0BB99B5638E825E925 /* Debug */ = {
+		020ECD20007CE82B76ED4D2A9761E19A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E01646A94B87500B88BE60E8CD72B5FF /* Pods-WindyModules.debug.xcconfig */;
 			buildSettings = {
@@ -297,6 +509,60 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0A7A5922AA30652759ED94BD67853F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38A1B113F93F86B6783C5516843FECC /* PureLayout.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		51AB9964DEA671349990F5DF0A2E97A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD738B5D910A9A308FA3DD02DF73361 /* OAStackView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OAStackView/OAStackView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5D66B100981A8422AB5C41A8BB827EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38A1B113F93F86B6783C5516843FECC /* PureLayout.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -341,6 +607,18 @@
 			};
 			name = Debug;
 		};
+		B643A902FB9923332F4475EB1425C05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD738B5D910A9A308FA3DD02DF73361 /* OAStackView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = OAStackView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -375,43 +653,7 @@
 			};
 			name = Release;
 		};
-		C9FE7B06C1C81F4EADA2911939521DEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		DFC9F1142E908C092A1138312153AEAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F61D8292A904D0A1998E3E0B2CD02A37 /* Release */ = {
+		D4F597B382EB6FADD6F359B6D5A5426E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B0F39AA49F2AD79FA84B969667DF20C /* Pods-WindyModules.release.xcconfig */;
 			buildSettings = {
@@ -428,6 +670,36 @@
 			};
 			name = Release;
 		};
+		DAD4904AB135F7A5C773532253CA33F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD738B5D910A9A308FA3DD02DF73361 /* OAStackView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OAStackView/OAStackView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E4EB5A13C9C3CB1FF0B61C6EB628A7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD738B5D910A9A308FA3DD02DF73361 /* OAStackView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = OAStackView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -440,20 +712,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		687C4915BCFDD76D5535BF372B22519C /* Build configuration list for PBXNativeTarget "Pods-WindyModules" */ = {
+		4FE5E73BC263EEC374B9AFC72E5FAD11 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D96A59093FBFD0BB99B5638E825E925 /* Debug */,
-				F61D8292A904D0A1998E3E0B2CD02A37 /* Release */,
+				5D66B100981A8422AB5C41A8BB827EB5 /* Debug */,
+				0A7A5922AA30652759ED94BD67853F37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B42B24AC65751D2F4DAAD871117DD728 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+		8B91EC3FF6497E68A4753D6100332510 /* Build configuration list for PBXNativeTarget "OAStackView-OAStackView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFC9F1142E908C092A1138312153AEAA /* Debug */,
-				C9FE7B06C1C81F4EADA2911939521DEA /* Release */,
+				E4EB5A13C9C3CB1FF0B61C6EB628A7A4 /* Debug */,
+				B643A902FB9923332F4475EB1425C05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF9D9936D08020B5FF2BCFE4C8D39772 /* Build configuration list for PBXNativeTarget "Pods-WindyModules" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				020ECD20007CE82B76ED4D2A9761E19A /* Debug */,
+				D4F597B382EB6FADD6F359B6D5A5426E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D45E6A4080164AB4506E2A6FD8977300 /* Build configuration list for PBXNativeTarget "OAStackView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD4904AB135F7A5C773532253CA33F2 /* Debug */,
+				51AB9964DEA671349990F5DF0A2E97A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

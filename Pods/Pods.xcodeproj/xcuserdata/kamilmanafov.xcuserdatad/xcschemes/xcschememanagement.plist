@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>OAStackView-OAStackView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OAStackView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-WindyModules.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>27FE4F61199E3047003E0FD7F0D3C203</key>
+		<key>156EB80B53E96097D8D4D93805A992ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3AFB0C212F107B90A7453F1C29DAC8D</key>
+		<key>2728D1720063D2C4734E38C851F43244</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9331DC06026102A6939CE75D29D7684E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA8B365D66B906406EFC007B55DEFDBB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

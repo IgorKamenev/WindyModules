@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D00D01AD0ED9ACB71A72D594'
+               BlueprintIdentifier = '879C3188AD0B3C455CF17D2B'
                BlueprintName = 'Pods-WindyModules'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-WindyModules.a'>

@@ -6,6 +6,7 @@
 target 'WindyModules' do
     
     pod 'PureLayout'
+    pod 'OAStackView'
 
 end
 

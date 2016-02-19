@@ -9,6 +9,7 @@
 #import "MyProfileViewController.h"
 #import "UIColor+AllColors.h"
 #import <PureLayout/PureLayout.h>
+#import <OAStackView/OAStackView+Constraint.h>
 #import "TestViewController.h"
 
 @interface MyProfileViewController ()
@@ -19,6 +20,8 @@
 @property (nonatomic) UILabel *followersNumberLabel;
 @property (nonatomic) UILabel *followingNumberLabel;
 @property (nonatomic) UILabel *favoritesNumberLabel;
+@property (nonatomic) UIButton *exerciseButton;
+@property (nonatomic) BOOL isHighlighted;
 
 @end
 
@@ -39,8 +42,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor baseColor];
     [self setupNavigationBarItems];
-    [self setupProfileImageView];
-    [self setupLabelsAndButtons];
+    [self setupProfileInfoBlock];
+    [self setupFollowingBlock];
+    [self setupActivityBlock];
+    [self setupSocialBlock];
 }
 
 - (void)setupNavigationBarItems
@@ -58,7 +63,6 @@
     
     self.navigationItem.rightBarButtonItem = button;
     
-//    self.navigationController.navigationBar.barTintColor = [UIColor baseColor];
     self.navigationController.navigationBar.translucent = NO;
 }
 
@@ -76,25 +80,25 @@
 
 #pragma mark - Views
 
-- (void)setupProfileImageView
+- (void)setupProfileInfoBlock
 {
     UIImage *profileImage = [UIImage imageNamed:@"ProfileImage"];
-    self.profileImageView = [[UIImageView alloc] initWithImage:profileImage];
+    _profileImageView = [[UIImageView alloc] initWithImage:profileImage];
 
     [self.view addSubview:_profileImageView];
     
     [_profileImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
     [_profileImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view withOffset:17.];
-}
-
-- (void)setupLabelsAndButtons
-{
+    
     //User's First and Second name Label
     _nameLabel = [self createLabelWithTitle:@"Farid Rafikov" fontName:@"HelveticaNeue-Light" fontSize:21.];
     _nameLabel.textColor = [UIColor whiteColor];
     [_nameLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_profileImageView withOffset:16.];
     [_nameLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
-    
+}
+
+- (void)setupFollowingBlock
+{
     //Following Labels
     _followingNumberLabel = [self createLabelWithTitle:@"25" fontName:@"HelveticaNeue-Bold" fontSize:18.];
     _followingNumberLabel.textColor = [UIColor whiteColor];
@@ -136,81 +140,159 @@
     
     [favoriteImageView autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:_favoritesNumberLabel withOffset:-5.];
     [favoriteImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:33.];
-    
-    //RectangleView
-    _rectangleView = [[UIView alloc] initWithFrame:CGRectZero];
-    _rectangleView.backgroundColor = [UIColor baseWithAlpha];
+}
+
+- (void)setupActivityBlock
+{
+    _rectangleView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    _rectangleView.backgroundColor = [UIColor colorWithRed:33./255. green:44./255. blue:54./255. alpha:0.1];
     _rectangleView.layer.cornerRadius = 4;
     
     [self.view addSubview:_rectangleView];
-    
     CGRect rect = [UIScreen mainScreen].bounds;
     float widthRectangle = rect.size.width * 0.94;
     float widthOffset = -rect.size.width * 0.06;
     
     [_rectangleView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+    [_rectangleView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_followingNumberLabel withOffset:45.];
+    //    [_rectangleView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view];
     [_rectangleView autoSetDimension:ALDimensionHeight toSize:158.];
-    [_rectangleView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:widthOffset];
-    [_rectangleView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:followingTextLabel withOffset:29.];
+    [_rectangleView autoMatchDimension:ALDimensionWidth
+                           toDimension:ALDimensionWidth
+                                ofView:self.view
+                            withOffset:widthOffset];
     
-    //Activities Label
-    UILabel *activities = [self createLabelWithTitle:@"ACTIVITIES" fontName:@"HelveticaNeue-Medium" fontSize:11.];
-    activities.textColor = [UIColor whiteColor];
-    [activities autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rectangleView withOffset:20.];
-    [activities autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+    UILabel *activitiesLabel = [self createLabelWithTitle:@"ACTIVITIES" fontName:@"HelveticaNeue-Medium" fontSize:11.];
+    activitiesLabel.textColor = [UIColor whiteColor];
+    [activitiesLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rectangleView withOffset:20.];
+    [activitiesLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
     
     //Activity Images Setup
-    UIImageView *exerciseImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ExerciseImage"]
-                                              highlightedImage:[UIImage imageNamed:@"ExerciseImage-Highlighted"]];
-    [self.view addSubview:exerciseImageView];
-    
-    [exerciseImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view withOffset:-127.5];
-    [exerciseImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rectangleView withOffset:74.];
-    
-    UIImageView *skiingImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SkiingImage"]
-                                                     highlightedImage:[UIImage imageNamed:@"SkiingImage-Highlighted"]];
-    [self.view addSubview:skiingImageView];
-    
-    [skiingImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view withOffset:-48.5];
-    [skiingImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rectangleView withOffset:74.];
+    if (NSClassFromString(@"UIStackView")) {
+        
+        //Exercise Icon
+        _exerciseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _exerciseButton.frame = CGRectZero;
+//        _isHighlighted = false;
+        [_exerciseButton setImage:[UIImage imageNamed:@"ExerciseImage"] forState:UIControlStateNormal];
+        [_exerciseButton addTarget:self action:@selector(exerciseButtonClicked:) forControlEvents:UIControlEventTouchDown];
+        [_exerciseButton setImage:[UIImage imageNamed:@"ExerciseImage-Highlighted"] forState:UIControlStateSelected];
+        _exerciseButton.adjustsImageWhenHighlighted = NO;
+        [_exerciseButton sizeToFit];
+        
+        //View 2
+        UIButton *skiingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        skiingButton.frame = CGRectZero;
+        [skiingButton setImage:[UIImage imageNamed:@"SkiingImage"] forState:UIControlStateNormal];
+        [skiingButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchDown];
+        [skiingButton setImage:[UIImage imageNamed:@"SkiingImage-Highlighted"] forState:UIControlStateHighlighted];
+        skiingButton.adjustsImageWhenHighlighted = NO;
+        [skiingButton sizeToFit];
+        
+        //View 3
+        UIButton *windSurfButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        windSurfButton.frame = CGRectZero;
+        [windSurfButton setImage:[UIImage imageNamed:@"WindSurfImage"] forState:UIControlStateNormal];
+        [windSurfButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchDown];
+        [windSurfButton setImage:[UIImage imageNamed:@"WindSurfImage-Highlighted"] forState:UIControlStateHighlighted];
+        windSurfButton.adjustsImageWhenHighlighted = NO;
+        [windSurfButton sizeToFit];
+        
+        UIButton *bikingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        bikingButton.frame = CGRectZero;
+        [bikingButton setImage:[UIImage imageNamed:@"BikingImage"] forState:UIControlStateNormal];
+        [bikingButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchDown];
+        [bikingButton setImage:[UIImage imageNamed:@"BikingImage-Highlighted"] forState:UIControlStateHighlighted];
+        bikingButton.adjustsImageWhenHighlighted = NO;
+        [bikingButton sizeToFit];
+        
+        //Stack View
+        UIStackView *stackView = [[UIStackView alloc] init];
+        
+        stackView.axis = UILayoutConstraintAxisHorizontal;
+        stackView.distribution = UIStackViewDistributionEqualSpacing;
+        stackView.alignment = UIStackViewAlignmentCenter;
+        
+        float widthSpacing = (widthRectangle/4 - 50.);
+        stackView.spacing = widthSpacing;
+        
+        [stackView addArrangedSubview:_exerciseButton];
+        [stackView addArrangedSubview:skiingButton];
+        [stackView addArrangedSubview:windSurfButton];
+        [stackView addArrangedSubview:bikingButton];
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false;
+        [self.view addSubview:stackView];
+        
+        //Layout for Stack View
+        [stackView autoAlignAxis:ALAxisVertical toSameAxisOfView:_rectangleView];
+        [stackView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:_rectangleView withOffset:6.];
+        
+    } else {
+        
+        //View 1
+        UIView *view1 = [[UIView alloc] init];
+        view1.backgroundColor = [UIColor blueColor];
+        [view1 autoSetDimension:ALDimensionWidth toSize:50.];
+        [view1 autoSetDimension:ALDimensionHeight toSize:50.];
+        
+        //View 2
+        UIView *view2 = [[UIView alloc] init];
+        view2.backgroundColor = [UIColor greenColor];
+        [view2 autoSetDimension:ALDimensionWidth toSize:50.];
+        [view2 autoSetDimension:ALDimensionHeight toSize:50.];
+        
+        //View 3
+        UIView *view3 = [[UIView alloc] init];
+        view3.backgroundColor = [UIColor magentaColor];
+        [view3 autoSetDimension:ALDimensionWidth toSize:50.];
+        [view3 autoSetDimension:ALDimensionHeight toSize:50.];
+        
+        //View 4
+        UIView *view4 = [[UIView alloc] init];
+        view4.backgroundColor = [UIColor orangeColor];
+        [view4 autoSetDimension:ALDimensionWidth toSize:50.];
+        [view4 autoSetDimension:ALDimensionHeight toSize:50.];
+        
+        OAStackView *stackView = [[OAStackView alloc] initWithArrangedSubviews:@[view1, view2, view3, view4]];
+        stackView.axis = UILayoutConstraintAxisHorizontal;
+        stackView.distribution = OAStackViewDistributionEqualSpacing;
+        stackView.alignment = UIStackViewAlignmentCenter;
+        
+        float widthSpacing = (widthRectangle/4 - 50.);
+        stackView.spacing = widthSpacing;
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false;
+        [self.view addSubview:stackView];
+        
+        [stackView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+        [stackView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view];
+        
+        NSLog(@"UIStackView is available from iOS 9.0, OAStackView used instead");
+    }
+}
 
-    UIImageView *inSeaImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"InSeaImage"]
-                                                     highlightedImage:[UIImage imageNamed:@"InSeaImage-Highlighted"]];
-    [self.view addSubview:inSeaImageView];
+- (void)setupSocialBlock
+{
+    UIButton *fbButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    fbButton.frame = CGRectZero;
+    [fbButton setImage:[UIImage imageNamed:@"Facebook21"] forState:UIControlStateNormal];
+    [fbButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchDown];
+    [fbButton sizeToFit];
+    [self.view addSubview:fbButton];
     
-    [inSeaImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view withOffset:48.5];
-    [inSeaImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rectangleView withOffset:74.];
+    [fbButton autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.view withOffset:64.];
+    [fbButton autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:49.];
     
-//    UIImageView *bikingImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BikingImage"]
-//                                                       highlightedImage:[UIImage imageNamed:@"BikingImage-Highlighted"]];
-//    [self.view addSubview:bikingImageView];
-//    
-//    [bikingImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view withOffset:127.5];
-//    [bikingImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:rectangleView withOffset:74.];
+    UIButton *vkButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    vkButton.frame = CGRectZero;
+    [vkButton setImage:[UIImage imageNamed:@"Vk21"] forState:UIControlStateNormal];
+    [vkButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchDown];
+    [vkButton sizeToFit];
+    [self.view addSubview:vkButton];
     
-    UIButton *imageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    imageButton.frame = CGRectZero;
-    [imageButton setImage:[UIImage imageNamed:@"BikingImage"] forState:UIControlStateNormal];
-    [imageButton setImage:[UIImage imageNamed:@"BikingImage-Highlighted"] forState:UIControlStateHighlighted];
-    [imageButton sizeToFit];
-    [self.view addSubview:imageButton];
-    
-    [imageButton autoSetDimensionsToSize:imageButton.frame.size];
-    [imageButton autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view withOffset:127.5];
-    [imageButton autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rectangleView withOffset:74.];
-    
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-//    
-//    NSString *string = @"ACTIVITIES";
-//    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
-//    
-//    float spacing = 2.;
-//    [attributedString addAttribute:NSKernAttributeName
-//                             value:@(spacing)
-//                             range:NSMakeRange(0, [string length])];
-//    
-//    label.attributedText = attributedString;
-//    [self.view addSubview:label];
+    [vkButton autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.view withOffset:64.];
+    [vkButton autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:137.];
 }
 
 - (UILabel *)createLabelWithTitle:(NSString *)title fontName:(NSString *)fontName fontSize:(CGFloat)fontSize
@@ -223,6 +305,28 @@
     [label autoSetDimensionsToSize:label.frame.size];
     
     return label;
+}
+
+- (void)exerciseButtonClicked: (UIButton *)sender
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if (_isHighlighted == false) {
+            
+            [_exerciseButton setSelected:YES];
+            _isHighlighted = true;
+            
+        } else {
+            
+            [_exerciseButton setSelected:NO];
+            _isHighlighted = false;
+        }
+    });
+}
+
+- (void)buttonClicked
+{
+    NSLog(@"Button Clicked");
 }
 
 
