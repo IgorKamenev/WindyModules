@@ -1,38 +1,38 @@
 //
-//  MyprofileViewController.m
+//  UsersProfileViewController.m
 //  WindyModules
 //
-//  Created by Камиль Манафов on 13/02/16.
+//  Created by Камиль Манафов on 20/02/16.
 //  Copyright © 2016 Igor Kamenev. All rights reserved.
 //
 
-#import "MyProfileViewController.h"
+#import "UsersProfileViewController.h"
 #import "UIColor+AllColors.h"
 #import <PureLayout/PureLayout.h>
 #import <OAStackView/OAStackView+Constraint.h>
-#import "TestViewController.h"
 
-@interface MyProfileViewController ()
+@interface UsersProfileViewController ()
 
 @property (nonatomic) UIImageView *profileImageView;
 @property (nonatomic) UILabel *nameLabel;
-@property (nonatomic) UIView *rectangleView;
-@property (nonatomic) UILabel *followersNumberLabel;
+@property (nonatomic) BOOL isOnline;
 @property (nonatomic) UILabel *followingNumberLabel;
+@property (nonatomic) UILabel *followersNumberLabel;
 @property (nonatomic) UILabel *favoritesNumberLabel;
 @property (nonatomic) UIButton *exerciseButton;
+@property (nonatomic) UIView *rectangleView;
 @property (nonatomic) BOOL isHighlighted;
 
 @end
 
-@implementation MyProfileViewController
+@implementation UsersProfileViewController
 
 - (instancetype)init
 {
     self = [super init];
     
     if (self) {
-        self.title = NSLocalizedString(@"Profile", nil);
+        self.title = NSLocalizedString(@"User's Profile", nil);
     }
     
     return self;
@@ -47,6 +47,7 @@
     [self setupNavigationBarItems];
     [self setupProfileInfoBlock];
     [self setupFollowingBlock];
+    [self setupSocialActions];
     [self setupActivityBlock];
     [self setupSocialBlock];
 }
@@ -59,47 +60,33 @@
                                                               action:@selector(getBack)];
     self.navigationItem.leftBarButtonItem = button;
     
-    button = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Settings"]
-                                              style:UIBarButtonItemStylePlain
-                                             target:self
-                                             action:@selector(settings:)];
-    
+    button = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Add User-48"] style:UIBarButtonItemStylePlain target:self action:@selector(addUser)];
     self.navigationItem.rightBarButtonItem = button;
-    
-    self.navigationController.navigationBar.translucent = NO;
-}
-
-#pragma mark - Actions
-
-- (void)getBack
-{
-    NSLog(@"Back button pressed");
-}
-
-- (void)settings:(UIBarButtonItem *)sender
-{
-    TestViewController *viewController = [TestViewController new];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    [self presentViewController:navController animated:YES completion:nil];
 }
 
 #pragma mark - Views
 
 - (void)setupProfileInfoBlock
 {
-    UIImage *profileImage = [UIImage imageNamed:@"ProfileImage"];
+    UIImage *profileImage = [UIImage imageNamed:@"ProfilePlaceholder"];
     _profileImageView = [[UIImageView alloc] initWithImage:profileImage];
-
+    
     [self.view addSubview:_profileImageView];
     
     [_profileImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
     [_profileImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view withOffset:17.];
     
     //User's First and Second name Label
-    _nameLabel = [self createLabelWithTitle:@"Farid Rafikov" fontName:@"HelveticaNeue-Light" fontSize:21.];
+    _nameLabel = [self createLabelWithTitle:@"Semen Solomon" fontName:@"HelveticaNeue-Light" fontSize:21.];
     _nameLabel.textColor = [UIColor whiteColor];
     [_nameLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_profileImageView withOffset:16.];
     [_nameLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+    
+    UILabel *isActive = [self createLabelWithTitle:@"online" fontName:@"HelveticaNeue-Light" fontSize:13.];
+    isActive.textColor = [UIColor colorWithRed:0.13 green:0.84 blue:0.05 alpha:1];
+    isActive.backgroundColor = [UIColor clearColor];
+    [isActive autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+    [isActive autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:4.];
 }
 
 - (void)setupFollowingBlock
@@ -107,7 +94,7 @@
     //Following Labels
     _followingNumberLabel = [self createLabelWithTitle:@"25" fontName:@"HelveticaNeue-Bold" fontSize:18.];
     _followingNumberLabel.textColor = [UIColor whiteColor];
-    [_followingNumberLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:29.];
+    [_followingNumberLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:41.];
     [_followingNumberLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
     
     UILabel *followingTextLabel = [self createLabelWithTitle:@"FOLLOWING" fontName:@"HelveticaNeue-Medium" fontSize:9.];
@@ -119,19 +106,19 @@
     _followersNumberLabel = [self createLabelWithTitle:@"10" fontName:@"HelveticaNeue-Bold" fontSize:18.];
     _followersNumberLabel.textColor = [UIColor whiteColor];
     [_followersNumberLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:_followingNumberLabel withOffset:-100.];
-    [_followersNumberLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:29.];
+    [_followersNumberLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:41.];
     
     UILabel *followersTextLabel = [self createLabelWithTitle:@"FOLLOWERS" fontName:@"HelveticaNeue-Medium" fontSize:9.];
     followersTextLabel.textColor = [UIColor colorWithWhite:1. alpha:0.36];
     [followersTextLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_followersNumberLabel withOffset:4.];
     [followersTextLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:_followersNumberLabel];
-
+    
     
     //Favorites Labels
     _favoritesNumberLabel = [self createLabelWithTitle:@"151" fontName:@"HelveticaNeue-Bold" fontSize:18.];
     _favoritesNumberLabel.textColor = [UIColor whiteColor];
     [_favoritesNumberLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:_followingNumberLabel withOffset:102.];
-    [_favoritesNumberLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:29.];
+    [_favoritesNumberLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:41.];
     
     UILabel *favoritesTextLabel = [self createLabelWithTitle:@"FAVORITES" fontName:@"HelveticaNeue-Medium" fontSize:9.];
     favoritesTextLabel.textColor = [UIColor colorWithWhite:1. alpha:0.36];
@@ -144,7 +131,57 @@
     [self.view addSubview:favoriteImageView];
     
     [favoriteImageView autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:_favoritesNumberLabel withOffset:-5.];
-    [favoriteImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:33.];
+    [favoriteImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_nameLabel withOffset:45.];
+}
+
+- (void)setupSocialActions
+{
+    if (NSClassFromString(@"UIStackView")) {
+        
+        UIButton *followActionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        followActionButton.frame = CGRectZero;
+        [followActionButton setTitle:@"Follow" forState:UIControlStateNormal];
+        [followActionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        followActionButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.];
+        followActionButton.layer.cornerRadius = 4;
+        [followActionButton sizeToFit];
+//        [followActionButton autoSetDimensionsToSize:followActionButton.frame.size];
+        [followActionButton autoSetDimension:ALDimensionHeight toSize:36.];
+        [followActionButton autoSetDimension:ALDimensionWidth toSize:163.];
+        
+        UIButton *sendMsgActionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        sendMsgActionButton.frame = CGRectZero;
+        [sendMsgActionButton setTitle:@"Send Message" forState:UIControlStateNormal];
+        [sendMsgActionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        sendMsgActionButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.];
+        sendMsgActionButton.layer.cornerRadius = 4;
+        [sendMsgActionButton sizeToFit];
+        [sendMsgActionButton autoSetDimensionsToSize:sendMsgActionButton.frame.size];
+        
+        //StackView setup
+        UIStackView *stackView = [[UIStackView alloc] init];
+        
+        stackView.axis = UILayoutConstraintAxisHorizontal;
+        stackView.distribution = UIStackViewDistributionEqualSpacing;
+        stackView.alignment = UIStackViewAlignmentCenter;
+        
+        stackView.spacing = 9.;
+        
+        [stackView addArrangedSubview:followActionButton];
+        [stackView addArrangedSubview:sendMsgActionButton];
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false;
+        [self.view addSubview:stackView];
+        
+        //Layout for Stack View
+        [stackView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+        [stackView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_followersNumberLabel withOffset:44.];
+
+    
+    } else {
+        
+    }
+
 }
 
 - (void)setupActivityBlock
@@ -159,7 +196,7 @@
     float widthOffset = -rect.size.width * 0.06;
     
     [_rectangleView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
-    [_rectangleView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_followingNumberLabel withOffset:45.];
+    [_rectangleView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_followingNumberLabel withOffset:100.];
     //    [_rectangleView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view];
     [_rectangleView autoSetDimension:ALDimensionHeight toSize:158.];
     [_rectangleView autoMatchDimension:ALDimensionWidth
@@ -299,6 +336,7 @@
     [vkButton autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-130.];
 }
 
+
 - (UILabel *)createLabelWithTitle:(NSString *)title fontName:(NSString *)fontName fontSize:(CGFloat)fontSize
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -310,7 +348,6 @@
     
     return label;
 }
-
 #pragma mark - Actions
 
 - (void)exerciseButtonClicked: (UIButton *)sender
@@ -330,10 +367,19 @@
     });
 }
 
-- (void)buttonClicked
+- (void)getBack
 {
-    NSLog(@"Button Clicked");
+    NSLog(@"Button pressed");
 }
 
+- (void)addUser
+{
+    NSLog(@"Button pressed");
+}
+
+- (void)buttonClicked
+{
+    NSLog(@"Button pressed");
+}
 
 @end

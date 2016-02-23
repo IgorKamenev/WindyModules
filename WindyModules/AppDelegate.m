@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ExampleTableWireframe.h"
 #import "MyProfileViewController.h"
+#import "UsersProfileViewController.h"
+#import "UserListViewController.h"
+#import "SpotFeedbackViewController.h"
 #import "UIColor+AllColors.h"
 
 @interface AppDelegate ()
@@ -23,7 +26,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.tabBar = [[UITabBarController alloc] init];
-    self.tabBar.viewControllers = @[ [[UINavigationController alloc] initWithRootViewController:[MyProfileViewController new]] ];
+    self.tabBar.viewControllers = @[ [[UINavigationController alloc] initWithRootViewController:[MyProfileViewController new]],
+                                     [[UINavigationController alloc] initWithRootViewController:[UsersProfileViewController new]],
+                                     [[UINavigationController alloc] initWithRootViewController:[UserListViewController new]],
+                                     [[UINavigationController alloc] initWithRootViewController:[SpotFeedbackViewController new]] ];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     

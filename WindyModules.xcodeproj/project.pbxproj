@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		100B349BEC587F0B43066601 /* libPods-WindyModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95814E44881260FCD941C6D2 /* libPods-WindyModules.a */; };
 		EC8EA9E31C74609C000669C0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8EA9E21C74609C000669C0 /* TestViewController.m */; };
+		EC8EA9ED1C78A08F000669C0 /* UsersProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8EA9EC1C78A08F000669C0 /* UsersProfileViewController.m */; };
+		EC8EA9EF1C798D50000669C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8EA9EE1C798D50000669C0 /* Assets.xcassets */; };
+		EC8EA9F71C7AE6EB000669C0 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8EA9F61C7AE6EB000669C0 /* UserListViewController.m */; };
+		EC8EA9FA1C7AEA0D000669C0 /* UserListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8EA9F91C7AEA0D000669C0 /* UserListTableCell.m */; };
+		EC8EAA031C7AFB30000669C0 /* SpotFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8EAA021C7AFB30000669C0 /* SpotFeedbackViewController.m */; };
+		EC8EAA061C7B1D4D000669C0 /* SpotFeedbackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8EAA051C7B1D4D000669C0 /* SpotFeedbackTableViewCell.m */; };
 		ECA84FDB1C6FC6FD00B7A47D /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA84FDA1C6FC6FD00B7A47D /* MyProfileViewController.m */; };
 		ECA84FE11C70207400B7A47D /* UIColor+AllColors.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA84FE01C70207400B7A47D /* UIColor+AllColors.m */; };
 		FB4A45561C6FB68B005CF95C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45551C6FB68B005CF95C /* main.m */; };
 		FB4A45591C6FB68B005CF95C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45581C6FB68B005CF95C /* AppDelegate.m */; };
-		FB4A45611C6FB68B005CF95C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4A45601C6FB68B005CF95C /* Assets.xcassets */; };
 		FB4A456F1C6FB6E3005CF95C /* ExampleTableWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A456E1C6FB6E3005CF95C /* ExampleTableWireframe.m */; };
 		FB4A45721C6FB6F0005CF95C /* ExampleTablePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45711C6FB6F0005CF95C /* ExampleTablePresenter.m */; };
 		FB4A45751C6FB6FF005CF95C /* ExampleTableInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A45741C6FB6FF005CF95C /* ExampleTableInteractor.m */; };
@@ -27,6 +32,17 @@
 		CB79FE431AD4F17E5FE37374 /* Pods-WindyModules.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyModules.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WindyModules/Pods-WindyModules.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8EA9E11C74609C000669C0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		EC8EA9E21C74609C000669C0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		EC8EA9EB1C78A08F000669C0 /* UsersProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersProfileViewController.h; sourceTree = "<group>"; };
+		EC8EA9EC1C78A08F000669C0 /* UsersProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersProfileViewController.m; sourceTree = "<group>"; };
+		EC8EA9EE1C798D50000669C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC8EA9F51C7AE6EB000669C0 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
+		EC8EA9F61C7AE6EB000669C0 /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
+		EC8EA9F81C7AEA0D000669C0 /* UserListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListTableCell.h; sourceTree = "<group>"; };
+		EC8EA9F91C7AEA0D000669C0 /* UserListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListTableCell.m; sourceTree = "<group>"; };
+		EC8EAA011C7AFB30000669C0 /* SpotFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotFeedbackViewController.h; sourceTree = "<group>"; };
+		EC8EAA021C7AFB30000669C0 /* SpotFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotFeedbackViewController.m; sourceTree = "<group>"; };
+		EC8EAA041C7B1D4D000669C0 /* SpotFeedbackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotFeedbackTableViewCell.h; sourceTree = "<group>"; };
+		EC8EAA051C7B1D4D000669C0 /* SpotFeedbackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotFeedbackTableViewCell.m; sourceTree = "<group>"; };
 		ECA84FD91C6FC6FD00B7A47D /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
 		ECA84FDA1C6FC6FD00B7A47D /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
 		ECA84FDF1C70207400B7A47D /* UIColor+AllColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AllColors.h"; sourceTree = "<group>"; };
@@ -35,7 +51,6 @@
 		FB4A45551C6FB68B005CF95C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB4A45571C6FB68B005CF95C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB4A45581C6FB68B005CF95C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB4A45601C6FB68B005CF95C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB4A45651C6FB68B005CF95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4A456D1C6FB6E3005CF95C /* ExampleTableWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableWireframe.h; sourceTree = "<group>"; };
 		FB4A456E1C6FB6E3005CF95C /* ExampleTableWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableWireframe.m; sourceTree = "<group>"; };
@@ -68,6 +83,133 @@
 				9012BE71F1674365B26042F6 /* Pods-WindyModules.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC8EA9E61C772C1D000669C0 /* User's profile */ = {
+			isa = PBXGroup;
+			children = (
+				EC8EA9EA1C78A06F000669C0 /* View */,
+				EC8EA9E91C78A066000669C0 /* Interactor */,
+				EC8EA9E81C78A05F000669C0 /* Presenter */,
+				EC8EA9E71C78A04D000669C0 /* Wireframe */,
+			);
+			name = "User's profile";
+			sourceTree = "<group>";
+		};
+		EC8EA9E71C78A04D000669C0 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		EC8EA9E81C78A05F000669C0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		EC8EA9E91C78A066000669C0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		EC8EA9EA1C78A06F000669C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC8EA9EB1C78A08F000669C0 /* UsersProfileViewController.h */,
+				EC8EA9EC1C78A08F000669C0 /* UsersProfileViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC8EA9F01C7AE6A1000669C0 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				EC8EA9F41C7AE6DB000669C0 /* View */,
+				EC8EA9F31C7AE6D4000669C0 /* Interactor */,
+				EC8EA9F21C7AE6CE000669C0 /* Presenter */,
+				EC8EA9F11C7AE6C7000669C0 /* Wireframe */,
+			);
+			name = UserList;
+			sourceTree = "<group>";
+		};
+		EC8EA9F11C7AE6C7000669C0 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		EC8EA9F21C7AE6CE000669C0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		EC8EA9F31C7AE6D4000669C0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		EC8EA9F41C7AE6DB000669C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC8EA9F51C7AE6EB000669C0 /* UserListViewController.h */,
+				EC8EA9F61C7AE6EB000669C0 /* UserListViewController.m */,
+				EC8EA9F81C7AEA0D000669C0 /* UserListTableCell.h */,
+				EC8EA9F91C7AEA0D000669C0 /* UserListTableCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC8EA9FB1C7AFACF000669C0 /* Spot Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				EC8EA9FF1C7AFAF6000669C0 /* View */,
+				EC8EA9FE1C7AFAF0000669C0 /* Interactor */,
+				EC8EA9FD1C7AFAEB000669C0 /* Presenter */,
+				EC8EA9FC1C7AFAE4000669C0 /* Wireframe */,
+			);
+			name = "Spot Feedback";
+			sourceTree = "<group>";
+		};
+		EC8EA9FC1C7AFAE4000669C0 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		EC8EA9FD1C7AFAEB000669C0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		EC8EA9FE1C7AFAF0000669C0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		EC8EA9FF1C7AFAF6000669C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC8EAA011C7AFB30000669C0 /* SpotFeedbackViewController.h */,
+				EC8EAA021C7AFB30000669C0 /* SpotFeedbackViewController.m */,
+				EC8EAA041C7B1D4D000669C0 /* SpotFeedbackTableViewCell.h */,
+				EC8EAA051C7B1D4D000669C0 /* SpotFeedbackTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		ECA84FD01C6FC31B00B7A47D /* Presenter */ = {
@@ -183,7 +325,6 @@
 				FB4A45571C6FB68B005CF95C /* AppDelegate.h */,
 				FB4A45581C6FB68B005CF95C /* AppDelegate.m */,
 				FB4A456B1C6FB6B8005CF95C /* Modules */,
-				FB4A45601C6FB68B005CF95C /* Assets.xcassets */,
 				FB4A45541C6FB68B005CF95C /* Supporting Files */,
 				ECA84FDF1C70207400B7A47D /* UIColor+AllColors.h */,
 				ECA84FE01C70207400B7A47D /* UIColor+AllColors.m */,
@@ -194,6 +335,7 @@
 		FB4A45541C6FB68B005CF95C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC8EA9EE1C798D50000669C0 /* Assets.xcassets */,
 				FB4A45651C6FB68B005CF95C /* Info.plist */,
 				FB4A45551C6FB68B005CF95C /* main.m */,
 			);
@@ -204,6 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				ECA84FD41C6FC69B00B7A47D /* MyProfile */,
+				EC8EA9E61C772C1D000669C0 /* User's profile */,
+				EC8EA9F01C7AE6A1000669C0 /* UserList */,
+				EC8EA9FB1C7AFACF000669C0 /* Spot Feedback */,
 				FB4A456C1C6FB6D3005CF95C /* ExampleTableModule */,
 			);
 			path = Modules;
@@ -289,7 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4A45611C6FB68B005CF95C /* Assets.xcassets in Resources */,
+				EC8EA9EF1C798D50000669C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,14 +495,19 @@
 			files = (
 				FB4A457C1C6FBB66005CF95C /* ExampleTableViewCell.m in Sources */,
 				FB4A45721C6FB6F0005CF95C /* ExampleTablePresenter.m in Sources */,
+				EC8EAA061C7B1D4D000669C0 /* SpotFeedbackTableViewCell.m in Sources */,
 				ECA84FDB1C6FC6FD00B7A47D /* MyProfileViewController.m in Sources */,
 				ECA84FE11C70207400B7A47D /* UIColor+AllColors.m in Sources */,
 				EC8EA9E31C74609C000669C0 /* TestViewController.m in Sources */,
+				EC8EA9F71C7AE6EB000669C0 /* UserListViewController.m in Sources */,
 				FB4A45781C6FB710005CF95C /* ExampleTableView.m in Sources */,
 				FB4A456F1C6FB6E3005CF95C /* ExampleTableWireframe.m in Sources */,
+				EC8EA9FA1C7AEA0D000669C0 /* UserListTableCell.m in Sources */,
 				FB4A45591C6FB68B005CF95C /* AppDelegate.m in Sources */,
 				FB4A45751C6FB6FF005CF95C /* ExampleTableInteractor.m in Sources */,
+				EC8EA9ED1C78A08F000669C0 /* UsersProfileViewController.m in Sources */,
 				FB4A45561C6FB68B005CF95C /* main.m in Sources */,
+				EC8EAA031C7AFB30000669C0 /* SpotFeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
